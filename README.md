@@ -36,3 +36,10 @@ Welcome to **DesignCube**, a modern and responsive digital agency website built 
 ## ✍️ Author
 Naresh Kumar – Java Full Stack Developer
 📧 Email: knareshkumar1910@gmail.com
+--- 
+📃 License
+This project is for educational purposes only. You are free to use, modify, and learn from it.
+
+---
+
+Let me know if you want me to generate a **fancy markdown with icons**, or need a **README with images + GitHub badges**. I can also help you set up this project structure in React with routing, components, and styles.
