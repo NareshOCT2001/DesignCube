@@ -184,7 +184,7 @@
 
 @media  (max-width: 400px){
   .section-container{
-    height: 200vh;
+    height: 150vh;
   }
     .cube-box {
         width: 150px;
