@@ -1,0 +1,187 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Awards Section Container */
+.award-section {
+  width: 100%;
+  background: #000000;
+  display: flex;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+
+/* Tables Area */
+.table-container {
+  width: 75%;
+  padding: 40px;
+  position: relative;
+}
+
+/* Awards Heading Container */
+.awards {
+  width: 25%;
+  position: relative;
+  background-color: #000;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.awards h1 {
+  position: absolute;
+  top: 0;
+  transform: translateY(var(--scroll-translate, 0)) rotate(var(--rotate-degree, 0deg));
+  transition: none; /* No transition, smooth with JS */
+  font-size: 3.2rem;
+  font-family: "Funnel Sans", sans-serif;
+  margin: 0;
+  padding: 12rem;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+
+
+/* Table Styling */
+table {
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table tr td {
+  padding: 15px 10px;
+  vertical-align: top;
+}
+
+.bold-text {
+  width: 32%;
+  font-family: "Funnel Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.definition {
+  width: 68%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+.date {
+  font-size: 12px;
+  color: #999;
+}
+
+/* === Tablet View (Below 1055px) === */
+/* === Below 1000px View === */
+@media (max-width: 1000px) {
+  .award-section {
+    display: flex;
+    flex-direction: column; /* Fix: Make awards come on top */
+    width: 100%;
+    min-height: auto;
+    background: #000; /* Ensure full background is black */
+  }
+
+  .table-container,
+  .awards {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+  }
+
+  .awards {
+    height: auto;
+    background: #111; /* Slight contrast or use #000 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .awards h1 {
+    position: static;
+    transform: none !important;
+    transition: none !important;
+    font-size: 2rem;
+    padding: 0;
+    text-align: center;
+    color: white;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .bold-text,
+  .definition {
+    width: 100% !important;
+    display: block;
+    padding: 5px 0;
+  }
+
+  .bold-text {
+    font-size: 1.8rem;
+    margin-top: 15px;
+  }
+
+  .definition {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    font-size: 0.9rem;
+    margin-top: -5px;
+  }
+}
+
+
+/* === Mobile View (Below 768px) === */
+@media (max-width: 768px) {
+  .table-container,
+  .awards {
+    padding: 20px;
+  }
+
+  .awards h1 {
+    font-size: 2rem;
+  }
+
+  .bold-text {
+    font-size: 1.6rem;
+  }
+}
+
+/* === Small Mobile View (Below 480px) === */
+@media (max-width: 480px) {
+  .table-container,
+  .awards {
+    padding: 15px;
+  }
+
+  .bold-text {
+    font-size: 1.4rem;
+  }
+
+  .definition {
+    font-size: 0.95rem;
+  }
+}

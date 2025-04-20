@@ -1,0 +1,91 @@
+.award-section {
+  background: #000;
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+  
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 67%;
+    padding: 10px;
+  }
+
+  
+  .awards {
+    width: 33%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .awards h1 {
+    position: absolute;
+    top: 0;
+    transform: translateY(0%);
+    transition: transform 0.1s ease-out;
+    font-size: 5.2rem;
+    font-family: "Funnel Sans", sans-serif;
+  }
+    
+
+  
+  
+  
+  table {
+    width: 100%;
+    /* padding: 15px 0px 15px 20px; */
+    text-align: left;
+  }
+  
+  
+  .bold-text {
+    width: 32%;
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 34px;
+  }
+  
+  .date {
+    font-size: 12px;
+  }
+
+  .num{
+    color: #9CFF33;
+    font-size: 4rem;
+  }
+  
+  .definition {
+    width: 66%;
+    align-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: lighter;
+  }
+  
+
+  @media (max-width: 768px) {
+    .award-section {
+      flex-direction: column;
+    }
+  
+    .awards,
+    .table-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .awards h1 {
+      position: relative;
+      text-align: center;
+      transform: none !important;
+      transition: none;
+    }
+  }
+  

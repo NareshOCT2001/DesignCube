@@ -1,0 +1,132 @@
+.team-cards {
+  background-color: #000;
+  width: 100%;
+  padding: 0px 15%;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+} 
+
+.team-section {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+  transition-duration: 0.7s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* border-radius: 8px; */
+  overflow: hidden;
+  backface-visibility: hidden;
+  color: #fff;
+}
+
+/* FRONT SIDE */
+.card-front img {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* box-shadow: 20px 20px wheat; */
+  background: linear-gradient(to top, black , transparent);
+  padding: 12px;
+  text-align: center;
+}
+
+.text-overlay h3,
+.text-overlay p {
+  margin: 4px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* BACK SIDE */
+.card-back {
+  background-color: #b8ff34;
+  color: #000;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-content {
+  text-align: center;
+  /* font-weight: bold; */
+  font-size: 24px;
+}
+
+.arrow {
+  font-size: 62px;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 768px){
+  .team-cards {
+    width: 100%;
+  } 
+  
+  .team-section {
+    height: 350px;
+  }
+  
+  .card {
+    width: 200px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .team-cards {
+    width: 100%;
+    padding: 3rem 0px;;
+  } 
+  
+  .team-section {
+    height: 350px;
+  }
+  
+  .card {
+    width: 270px;
+    height: 350px;
+  }
+}

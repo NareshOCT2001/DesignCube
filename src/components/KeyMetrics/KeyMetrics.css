@@ -1,0 +1,147 @@
+.metrics-containner{
+  width: 100%;
+  background-color: #000;
+}
+
+
+/* Section Container */
+.metrics-section {
+    margin: 0px auto;
+    text-align: left;
+    width: 100%;
+    max-width: 1224px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    padding: 40px 0px;
+  }
+  
+  /* Column Styling */
+  /* Column Styling */
+  .metric-box {
+    width: 33.33%; /* Ensures three equal columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Aligns all content to the left */
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* First Column (Key Metrics) */
+  .key-metric {
+    font-size: 72px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Other Columns (Details) */
+  .details {
+    text-align: left;
+    margin: 0px;
+  }
+  
+  .number {
+    font-size: 72px;
+    font-weight: bold;
+    color: #9cff33;
+    text-align: left;
+  }
+  
+  #col-3 {
+    padding-top: 50px;
+  }
+  
+  .title {
+    text-align: left;
+    font-size: 32px;
+    font-weight: lighter;
+    padding: 10px 0px;
+  }
+  
+  .description {
+    font-size: 18px;
+    text-align: left;
+    font-weight: lighter;
+    max-width: 400px;
+    padding: 10px 0px 0px 0px;
+    color: #cccccc;
+  }
+  
+  /* Empty Column */
+  .empty {
+    width: 33.33%; /* Keeps spacing even */
+    visibility: hidden; /* Maintains layout structure */
+    display: flex; /* Ensures equal height alignment */
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablet View (≤1024px) */
+  @media (max-width: 1024px) {
+    .metrics-section {
+      width: 100%;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+  
+    .key-metric {
+      font-size: 40px;
+    }
+  
+    .metric-box {
+      width: 48%;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .number {
+      font-size: 40px;
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  
+    .description {
+      font-size: 14px;
+    }
+  }
+  
+  /* Mobile View (≤768px) */
+  @media (max-width: 768px) {
+    .metrics-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .metric-box {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+  
+    .number {
+      font-size: 36px;
+    }
+  
+    .title {
+      font-size: 22px;
+    }
+  
+    .description {
+      font-size: 14px;
+      max-width: 90%;
+    }
+  
+    .empty {
+      display: none; /* Remove empty column on mobile */
+    }
+  }
+  

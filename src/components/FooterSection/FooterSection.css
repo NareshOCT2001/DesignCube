@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Watermark */
+.footer-watermark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #7EF500;
+  /* opacity: 0.05; */
+  font-weight: 900;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 0;
+  font-size: 12vw;
+}
+
+/* Footer Container */
+.footer-section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #9CFF33;
+  padding: 5.5rem 1.25rem 0px 1.25rem;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: self-start;
+  justify-content: space-around;
+}
+
+/* Layout */
+.footer-content {
+  display: grid;
+grid-template-areas: 
+"left-side right-side";
+  width: 100%;
+  /* max-width: 1200px; */
+  gap: 2rem;
+  z-index: 1;
+}
+
+/* Footer Sections */
+.footer-left,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-left {
+  width: 100%;
+  grid-area: left-side;
+  display: flex;
+  /* background-color: #428000; */
+  text-align: center;
+  align-items: flex-start;
+}
+
+
+.footer-right{
+  width: 100%;
+  grid-area: right-side;
+  /* background-color: #7EF500; */
+}
+/* Contact Info */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-address,
+.footer-email,
+.footer-call {
+  color: #000;
+  font-size: 1.1rem;
+  word-break: break-word;
+}
+
+/* Links Grid */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0rem;
+  justify-content: center;
+  width: 100%;
+  text-align: left;
+  overflow: hidden; /* Prevent horizontal scroll */
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  min-width: 150px;
+  /* max-width: 180px; */
+  text-align: left;
+}
+
+/* Text Styling */
+.footer-heading {
+  font-size: 1rem;
+  padding-top: 2rem;
+  font-weight: 700;
+  color: #428000;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #428000;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .footer-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 870px) {
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-right{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .links-column {
+    flex: 1 1 45%;
+    text-align: left;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .links-column {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-watermark {
+    font-size: 16vw;
+  }
+
+  .footer-logo {
+    font-size: 6vw;
+  }
+
+  .footer-heading {
+    font-size: 0.95rem;
+  }
+
+  .footer-link {
+    font-size: 0.85rem;
+  }
+
+  .footer-address,
+  .footer-email,
+  .footer-call {
+    font-size: 1rem;
+  }
+}
+
+/* Button */
+.price-quote {
+  width: 100%;
+  max-width: 17.5rem;
+  padding: 0 20px;
+  height: 3.5rem;
+  background-color: black;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.price-quote:hover {
+  background-color: #fffffe;
+  color: black;
+  /* border: 1px solid black; */
+}
+
+.arrow2 {
+  position: absolute;
+  right: 1.25rem;
+  opacity: 0;
+  transform: translateX(1.25rem);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  font-size: 1.25rem;
+}
+
+.price-quote:hover .arrow2 {
+  opacity: 1;
+  transform: translateX(0);
+}

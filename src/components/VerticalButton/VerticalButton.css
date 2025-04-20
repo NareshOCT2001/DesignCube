@@ -1,0 +1,66 @@
+  /* Container Styles for the button with dots */
+  .scrolling-section {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+  }
+
+  .button-container {
+    width: 32px;
+    height: 70px;
+    background-color: rgb(0, 0, 0); /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 48px; /* Rounded corners */
+    opacity: 1;
+    border: 2px solid rgb(156, 255, 51);
+    overflow: hidden; /* Hide the overflowing dots */
+  }
+
+  /* List Styles for dots */
+  .dots-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    animation: scrollUp 50s infinite linear;
+  }
+
+  /* Dot Styles */
+  .dot {
+    width: 3px;
+    height: 3px;
+    padding: -20px 0px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+/* Animation for infinite scrolling */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(-0%);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 500px){
+  .button-container {
+    width: 16px;
+    height: 35px;
+    border: 1px solid rgb(156, 255, 51);
+  }
+  
+}

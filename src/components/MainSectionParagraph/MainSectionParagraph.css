@@ -1,0 +1,52 @@
+.para-box {
+  background: #000;
+  width: 100%;
+  color: rgb(158, 158, 158);
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-para {
+  width: 17rem;
+  padding: 14px 18px;
+  text-align: left;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  /* font-weight: 20%; */
+}
+
+.right-para {
+  width: 20%;
+  font-size: 18px;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .para-box {
+    flex-direction: column;
+  }
+
+  .left-para {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .right-para {
+    width: 100%;
+    padding-left: 55%;
+    justify-content: end;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .para-box{
+    min-height: 120vh;
+    align-content: start;
+  }
+  .right-para {
+    text-align: left;
+    padding-bottom: 70vh;
+    padding-right: 12vw;
+  }
+}

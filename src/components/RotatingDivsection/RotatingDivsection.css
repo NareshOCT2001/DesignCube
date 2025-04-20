@@ -1,0 +1,210 @@
+.section-container {
+  width: 100%;
+  height: 120vh;
+  background: #000;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.cube-box {
+  width: 900px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCubeX linear;
+  animation-iteration-count: 1;
+  animation-timeline: view();
+  z-index: 999;
+}
+
+.skills-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 1);
+  border: none; /* Remove default border */
+  box-sizing: border-box;
+}
+
+/* Top & Bottom extended borders using pseudo-elements */
+.skills-section::before,
+.skills-section::after {
+  content: "";
+  position: absolute;
+  left: -25px;
+  width: calc(100% + 100px);
+  height: 1px;
+  background-color: rgb(56, 56, 56);
+  z-index: 1;
+}
+
+.skills-section::before {
+  top: 0;
+}
+
+.skills-section::after {
+  bottom: 0;
+}
+
+/* Left & Right extended borders as real elements */
+.skills-section .left-border,
+.skills-section .right-border {
+  position: absolute;
+  top: -25px;
+  height: calc(100% + 80px);
+  width: 1px;
+  background-color: rgb(56, 56, 56);
+  z-index: 1;
+}
+
+.skills-section .left-border {
+  left: 0;
+  transform: translateX(-25px);
+}
+
+.skills-section .right-border {
+  right: 0;
+  transform: translateX(25px);
+}
+
+.description1 {
+  width: 70%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+  text-align: left;
+  color: white;
+}
+
+.green-text {
+  color: #85da2b;
+  font-size: 30px;
+}
+
+.instruction {
+  font-size: 26px;
+  padding-top: 10px;
+}
+
+.number-logo {
+    display: flex;
+  width: 30%;
+  color: #262626;
+  font-size: 17rem;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-side {
+  transform: rotateY(0deg) translateZ(150px);
+}
+.back-side {
+  transform: rotateY(180deg) translateZ(150px);
+}
+.right-side {
+  transform: rotateY(90deg) translateZ(150px);
+}
+.left-side {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+.top-side {
+  transform: rotateX(90deg) translateZ(150px);
+}
+.bottom-side {
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+@keyframes rotateCubeX {
+  0% {
+    transform: rotateX(-80deg) scale(0.7);
+  }
+  100% {
+    transform: rotateX(360deg) scale(1);
+  }
+}
+
+
+@media  (max-width: 1150px){
+  .section-container{
+    min-height: 100vh;
+  }
+    .cube-box {
+        width: 500px;
+    }      
+    .number-logo {
+        padding-left: 12rem;
+    }
+    .description1{
+        position: absolute;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .number-logo {
+        width: 100%;
+    }
+}
+
+@media  (max-width: 750px){
+  .section-container{
+    min-height: 100vh;
+  }
+    .cube-box {
+        width: 270px;
+    }      
+    .number-logo {
+        padding-left: 0rem;
+    }
+    .description1{
+      align-content: space-between;
+      padding: 0px;
+    }
+    .green-text{
+      font-size: 1.3rem;
+    }
+
+    .instruction{
+      font-size: 1.5rem;
+    }
+
+}
+
+@media  (max-width: 400px){
+  .section-container{
+    height: 200vh;
+  }
+    .cube-box {
+        width: 150px;
+        /* height: 300px; */
+    }      
+    .number-logo {
+        padding-left: 0rem;
+        font-size: 8rem;
+    }
+    .description1{
+      align-content: space-between;
+      padding: 0px;
+    }
+    .green-text{
+      font-size: 1rem;
+    }
+
+    .instruction{
+      font-size: 1rem;
+    }
+
+
+}

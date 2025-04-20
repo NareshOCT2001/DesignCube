@@ -1,0 +1,103 @@
+.about {
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  padding: 25vh 0px;
+  position: relative;
+  color: #CACACA;
+  z-index: 2;
+}
+
+
+
+.section {
+  transition: opacity 1s ease;
+  /* SLOW FADE */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.project {
+  z-index: 1;
+
+}
+
+.MEETTHETEAM {
+  font-size: 8rem;
+  text-align: center;
+}
+
+#CUSTOMERTHOUGHTS {
+  font-size: 5.5rem;
+}
+
+#about-us {
+  font-size: 17vw;
+  text-align: center;
+}
+
+#OURPROJECTS {
+  font-size: 12vw;
+}
+
+@media (max-width: 1200px) {
+  .about {
+    min-height: 30vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10vh 0px;
+  }
+
+  .MEETTHETEAM {
+    font-size: 6rem;
+  }
+
+  #CUSTOMERTHOUGHTS {
+    font-size: 4rem;
+  }
+
+  #about-us {
+    font-size: 14vw;
+    text-align: center;
+  }
+
+  #OURPROJECTS {
+    font-size: 8vw;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .about {
+    height: 10vh;
+    /* padding: 20vh 0px; */
+    justify-content: center;
+    align-content: center;
+  }
+
+  .MEETTHETEAM {
+    font-size: 5rem;
+
+  }
+
+  #CUSTOMERTHOUGHTS {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .MEETTHETEAM {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .MEETTHETEAM {
+    font-size: 2rem;
+  }
+}

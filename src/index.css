@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Scope+One&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* overflow: scroll; */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/* Footer Section */
+/* Main Layout Styles */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding-bottom: 100vh; /* Creates space for footer */
+}
+
+.content-section {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-header {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.9);
+  padding: 1rem;
+}
+
+.main-wrapper {
+  position: relative; /* So absolute footer works properly */
+  min-height: 100vh;
+}
+
+.content {
+  padding: 2rem;
+  position: relative;
+  z-index: 1; /* Above the background footer */
+}

@@ -1,0 +1,100 @@
+.cube-container {
+    padding: 130px 0px;
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    position: absolute;
+    perspective: 1000px; 
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotateCube 20s infinite linear;
+  }
+  
+  /* Cube Faces */
+  .face {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid greenyellow;
+  }
+  
+  /* Positioning Cube Faces */
+  .front {
+    transform: translateZ(200px);
+  }
+  .back {
+    transform: rotateY(180deg) translateZ(200px);
+  }
+  .left {
+    transform: rotateY(-90deg) translateZ(200px);
+    background-image: url("https://images.unsplash.com/photo-1735825764445-af30f44dc49f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D");
+  }
+  .right {
+    transform: rotateY(90deg) translateZ(200px);
+    background-image: url("https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?w=600");
+  }
+  .top {
+    transform: rotateY(90deg) translateZ(200px);
+    background-image: url("https://images.unsplash.com/photo-1734004691776-d7f04732c174?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIzfHx8ZW58MHx8fHx8");
+  }
+  .bottom {
+    transform: rotateY(-90deg) translateZ(200px);
+    background-image: url("https://images.unsplash.com/photo-1735825764445-af30f44dc49f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D");
+  }
+  
+  /* Rotation Animation */
+  @keyframes rotateCube {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cube-container {
+      width: 200px;
+      height: 200px;
+      padding: 50px 0px;
+      top: 150%;
+      left: 50%;
+
+    }
+    .face {
+      width: 200px;
+      height: 200px;
+    }
+    .front {
+      transform: translateZ(100px);
+    }
+    .back {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+    .left {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+    .right {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .top {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .bottom {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+  }
+  
+
+

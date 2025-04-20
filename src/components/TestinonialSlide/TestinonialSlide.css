@@ -1,0 +1,165 @@
+/* Testimonial section */
+.testimonial-section {
+  background: #000;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+  overflow-x: hidden; /* Prevent overflow on small screens */
+}
+
+.testimonial-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonial-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.testimonial {
+  min-width: 100%;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.testimonial img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.testimonial h1 {
+  font-size: 1.8rem;
+  font-family: sans-serif;
+}
+
+.testimonial-text {
+  font-family: "Funnel Sans", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.p1 {
+  font-family: "Funnel Sans", sans-serif;
+  font-size: 1rem;
+  color: #bebcbc;
+}
+
+.p2 {
+  font-family: "Funnel Sans", sans-serif;
+  padding: 50px 20px;
+  font-size: 2rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  width: 60px;
+  height: 60px;
+  font-weight: lighter;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-section:hover .prev,
+.testimonial-section:hover .next {
+  opacity: 1;
+}
+
+.prev {
+  left: 25px;
+}
+
+.next {
+  right: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-section {
+    padding: 60px 0px;
+  }
+
+  .testimonial-container {
+    padding: 0px 1rem;
+  }
+
+  .testimonial {
+    padding: 20px;
+  }
+
+  .p2 {
+    padding: 40px 10px;
+    font-size: 1.4rem;
+  }
+
+  .nav {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .prev {
+    left: 15px;
+  }
+
+  .next {
+    right: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .testimonial {
+    padding: 20px;
+  }
+
+  .p2 {
+    padding: 30px 10px;
+    font-size: 1rem;
+  }
+
+  .nav {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+}

@@ -1,0 +1,55 @@
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background: #000000;
+    padding: 70px 0px 0px 0px;
+  }
+  
+  .marquee {
+    display: flex;
+    gap: 0px;
+    animation: marquee 50s linear infinite;
+    min-width: 100%;
+    font-size: 13px;
+    font-weight: 100;
+  }
+  
+  .marquee li {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: rgb(171, 171, 171);
+    background: #000000;
+    border-radius: 5px;
+  }
+  
+  .marquee li {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .marquee li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px; /* Adjust width */
+    height: 14px; /* Adjust height */
+    background: url(./assets/star.png) no-repeat center center;
+    background-size: contain;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
