@@ -160,7 +160,7 @@
 
 @media  (max-width: 750px){
   .section-container{
-    min-height: 100vh;
+    min-height: 150vh;
   }
     .cube-box {
         width: 270px;
@@ -184,7 +184,7 @@
 
 @media  (max-width: 400px){
   .section-container{
-    height: 150vh;
+    height: 50vh;
   }
     .cube-box {
         width: 150px;

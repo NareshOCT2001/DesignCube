@@ -10,17 +10,19 @@ const FooterSection = () => {
       <div className="footer-content">
 
         <div className="footer-left">
-          
+
           <div className="footer-contact">
             <h3 className="footer-heading">CONTACT</h3>
-            <p className="footer-address">
-              Guvi Certified Full Stack Developer
+            <p className="footer-address">Guvi Certified Full Stack Developer</p>
+            <p className="footer-email">
+              <a href="mailto:knareshkumar1910@gmail.com">knareshkumar1910@gmail.com</a>
             </p>
-            <p className="footer-email">knareshkumar1910@gmail.com</p>
-            <p className="footer-call">Phone: +91 82200 07797</p>
+            <p className="footer-call">
+              Phone: <a href="tel:+918220007797">+91 82200 07797</a>
+            </p>
             <button className="price-quote">
               Get a Price Quote <span className="arrow2">→</span>
-            </button>{" "}
+            </button>
           </div>
         </div>
 
@@ -28,16 +30,16 @@ const FooterSection = () => {
           <div className="footer-links">
             <div className="links-column">
               <h3 className="footer-heading">MENU</h3>
-              <a href="#" className="footer-link">
+              <a href="home" className="footer-link">
                 Home
               </a>
-              <a href="#" className="footer-link">
+              <a href="about" className="footer-link">
                 About
               </a>
-              <a href="#" className="footer-link">
+              <a href="services" className="footer-link">
                 Services
               </a>
-              <a href="#" className="footer-link">
+              <a href="projects" className="footer-link">
                 Projects
               </a>
             </div>
@@ -93,7 +95,7 @@ const FooterSection = () => {
                 WhatsApp
               </a>
               <a
-                href="https://t.me/knareshkumar"
+                href="https://t.me/8220007797"
                 className="footer-link"
                 target="_blank"
                 rel="noopener noreferrer"

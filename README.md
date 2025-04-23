@@ -1,45 +1,12 @@
-# 🌟 DesignCube – Creative Digital Agency Website
+# React + Vite
 
-Welcome to **DesignCube**, a modern and responsive digital agency website built using **React + Vite**. This project was developed as part of my front-end training at **Code99 IT Academy**. The goal was to create a professional website that showcases the services and brand identity of a fictional creative agency.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🚀 Tech Stack
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- ⚛️ **React** – UI library for building components
-- ⚡ **Vite** – Lightning-fast development environment
-- 🎨 **CSS** – Custom styles and responsive layout
-- 🧼 **ESLint** – For clean and error-free code
-- 📦 **NPM** – Package manager for dependencies
+## Expanding the ESLint configuration
 
----
-
-## 📁 Features
-
-- 🧠 About Us & Vision Statement  
-- 📊 Key Metrics Section (Stats, Clients, Projects)  
-- 💼 Services Showcase (Web, SEO, UI/UX, Branding, etc.)  
-- 👤 Meet the Team Layout  
-- 🏆 Awards Timeline  
-- 💬 Customer Testimonials Section  
-- 📱 Fully Responsive Design  
-- 🧭 CTA Sections – “Join Now” and “Get Quote”
-
----
-
-## 🛠️ Installation & Setup
-
-1. **Clone this repo**
-   ```bash
-   git clone https://github.com/yourusername/designcube-react.git
-   cd designcube-react
-## ✍️ Author
-Naresh Kumar – Java Full Stack Developer
-📧 Email: knareshkumar1910@gmail.com
---- 
-📃 License
-This project is for educational purposes only. You are free to use, modify, and learn from it.
-
----
-
-Let me know if you want me to generate a **fancy markdown with icons**, or need a **README with images + GitHub badges**. I can also help you set up this project structure in React with routing, components, and styles.
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

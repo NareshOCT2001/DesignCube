@@ -176,9 +176,11 @@ table tr td {
   .awards {
     padding: 15px;
   }
-
+  .awards h1 {
+    font-size: 1.5rem;
+  }
   .bold-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .definition {
